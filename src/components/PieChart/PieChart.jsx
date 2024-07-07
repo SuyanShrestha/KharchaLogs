@@ -2,26 +2,41 @@ import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import "./PieChart.css";
 
-import { ArcElement, CategoryScale, Chart, DoughnutController, Legend, Tooltip } from 'chart.js';
+import { useSelector } from "react-redux";
+
+import {
+  ArcElement,
+  CategoryScale,
+  Chart,
+  DoughnutController,
+  Legend,
+  Tooltip,
+} from "chart.js";
 
 Chart.register(DoughnutController, ArcElement, CategoryScale, Tooltip, Legend);
 
 const PieChart = () => {
+  const categorySums = useSelector((state) => state.expenses.categorySums);
+
+  // if (!categorySums) {
+  //   return null;
+  // }
+
   return (
     <div className="pie-chart">
       <Doughnut
         data={{
-          labels: ["Food", "Health", "Education", "Entertainment", "Miscellaneous"],
+          labels: Object.keys(categorySums),
           datasets: [
             {
               label: "Expenses",
-              data: [300, 50, 100, 150, 200],
+              data: Object.values(categorySums),
               backgroundColor: [
-                "rgba(255, 99, 132, 0.6)",
-                "rgba(54, 162, 235, 0.6)",
-                "rgba(255, 206, 86, 0.6)",
-                "rgba(75, 192, 192, 0.6)",
-                "rgba(153, 102, 255, 0.6)",
+                "rgba(66, 135, 245, 0.6)", 
+                "rgba(245, 159, 66, 0.6)", 
+                "rgba(245, 66, 209, 0.6)", 
+                "rgba(66, 245, 188, 0.6)",  
+                "rgba(245, 66, 66, 0.6)",   
               ],
             },
           ],

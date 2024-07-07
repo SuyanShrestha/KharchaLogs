@@ -14,15 +14,16 @@ import Footer from "./components/Footer/Footer";
 const App = () => {
   return (
     <BrowserRouter>
-      <div>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/add" element={<Add/>}/>
-          <Route path="/charts" element={<Charts/>}/>
-
-          <Route path="/*" element={<Navigate to="/" />} />
-        </Routes>
+      <div className="main-div">
+        <div>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/add" element={<Add/>}/>
+            <Route path="/charts" element={<Charts/>}/>
+            <Route path="/*" element={<Navigate to="/" />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </BrowserRouter>

@@ -4,13 +4,15 @@
 /* VARIABLES */
 :root {
   --line-height-big: 1.5;
-  --background: #E5E5E5;
+  --background: #faf9f6;
   --primary-color: #fff;
-  --secondary-color-30: #E8E8E8;
-  --secondary-color-10: #D36135;
+  /* --secondary-color-30: #E8E8E8; */
+  --secondary-color-30: #faf9f6;
+  /* --secondary-color-10: #D36135; */
+  --secondary-color-10: #cf4307;
 
   --primary-text-color: #000;
-  --secondary-text-color: #E5E5E5;
+  --secondary-text-color: #e5e5e5;
 }
 
 * {
@@ -23,4 +25,12 @@
 body {
   background-color: var(--background);
   color: var(--primary-color);
+}
+
+.main-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2vh;
+  min-height: 100vh;
 }
