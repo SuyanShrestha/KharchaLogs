@@ -19,7 +19,8 @@
   background-color: var(--primary-color);
   border-radius: 1rem;
 
-  padding-left: 0.5rem;
+  padding-left: 1rem;
+  box-shadow: rgba(85, 60, 154, 0.25) 0px 0px 10px;
 }
 
 .searchbar input {

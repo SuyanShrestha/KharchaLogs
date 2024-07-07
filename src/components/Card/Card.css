@@ -1,7 +1,7 @@
 .card {
   background-color: var(--primary-color);
-  box-shadow:  20px 20px 60px #bebebe,
-             -5px -5px 60px #ffffff;
+  /* box-shadow: 20px 20px 60px #bebebe, -5px -5px 60px #ffffff; */
+  box-shadow: rgba(85, 60, 154, 0.25) 0px 0px 10px;
   padding: 12px;
   margin: 0.5rem 0;
   display: flex;
@@ -9,6 +9,7 @@
   align-items: center;
 
   border-right: var(--secondary-color-10) 5px solid;
+  border-radius: 1rem;
 }
 
 .card-image {

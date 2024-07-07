@@ -1,0 +1,35 @@
+.charts-div{
+    color: black;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.top-div{
+    min-height: 38vh;
+    width: 50%;
+    margin: 2rem 0;
+    background-color: limegreen;
+}
+
+.bottom-div{
+    min-height: 35vh;
+    width: 50%;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.pie-div,
+.bar-div{
+    min-height: 40vh;
+    width: 50%;
+    background-color: limegreen;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

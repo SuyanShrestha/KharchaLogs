@@ -1,6 +1,6 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Card from "../Card/Card";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import food from "../../assets/icons/food.png";
 
@@ -9,10 +9,16 @@ import "react-toastify/dist/ReactToastify.css";
 // import { debounce } from 'lodash';
 
 import "./ExpenseList.css";
+import { handleCategorySums } from "../../redux/actions/expenses";
 
 const ExpenseList = () => {
 
+  const dispatch = useDispatch();
+
   const [filteredList, setFilteredList] = useState([]);
+
+  // const [categorySums, setCategorySums] = useState({});
+  const categorySums = useSelector((state) => state.expenses.categorySums);
 
   // lemme destruct the expenses from the state
   const { expenseList: list, searchQuery } = useSelector(
@@ -23,14 +29,17 @@ const ExpenseList = () => {
   const debounceTimeoutRef = useRef(null);
 
   const handleFilter = (list, query) => {
-    setFilteredList(list.filter(
-      (item) =>
-        item.title &&
-        (query === "" || item.title.toLowerCase().includes(query.toLowerCase()))
-    ));
+    setFilteredList(
+      list.filter(
+        (item) =>
+          item.title &&
+          (query === "" ||
+            item.title.toLowerCase().includes(query.toLowerCase()))
+      )
+    );
   };
 
-
+  // useEffect for search
   useEffect(() => {
     if (debounceTimeoutRef.current) {
       clearTimeout(debounceTimeoutRef.current);
@@ -39,6 +48,37 @@ const ExpenseList = () => {
       handleFilter(list, searchQuery);
     }, 500);
   }, [list, searchQuery]);
+
+  // useEffect for category sums
+  useEffect(() => {
+    let categories = [
+      "Food",
+      "Health",
+      "Education",
+      "Entertainment",
+      "Miscellaneous",
+    ];
+    let sums = {};
+    categories.forEach((category) => {
+      sums[category] = list
+        .map((expense) => {
+          // console.log(expense);
+          return expense;
+        })
+        .filter(
+          (expense) => expense.category && expense.category.name === category
+        )
+        .reduce((sum, current) => sum + current.amount, 0);
+    });
+
+    // setCategorySums(sums);
+    dispatch(handleCategorySums(sums));
+  }, [list, dispatch]);
+
+  // just for check
+  useEffect(() => {
+    console.log(categorySums);
+  }, [categorySums]);
 
   const notifySuccess = () => toast.success("Expense deleted successfully");
   return (
@@ -54,7 +94,11 @@ const ExpenseList = () => {
 
       {filteredList && filteredList.length ? (
         filteredList.map((item) => (
-          <Card item={item} notifySuccess={notifySuccess} />
+          <Card
+            item={item}
+            notifySuccess={notifySuccess}
+            key={item.createdAt}
+          />
         ))
       ) : (
         <div className="empty-state">
