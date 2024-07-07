@@ -7,6 +7,9 @@ import PieChart from "../../components/PieChart/PieChart";
 import BarChart from "../../components/BarChart/BarChart";
 import LineChart from "../../components/LineChart/LineChart";
 
+import LottieIcons from "../../components/LottieIcons/LottieIcons";
+import EmptyLottie2 from "../../assets/lottie/EmptyLottie2.json";
+
 const Charts = () => {
   const categorySums = useSelector((state) => state.expenses.categorySums);
 
@@ -14,6 +17,7 @@ const Charts = () => {
     return (
       <div className="empty-chart">
         <h1>No records found</h1>
+        <LottieIcons animationData={EmptyLottie2} width={400}/>
       </div>
     );
   }

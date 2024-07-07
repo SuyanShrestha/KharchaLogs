@@ -11,8 +11,10 @@ import "react-toastify/dist/ReactToastify.css";
 import "./ExpenseList.css";
 import { handleCategorySums } from "../../redux/actions/expenses";
 
-const ExpenseList = () => {
+import EmptyLottie from "../../assets/lottie/EmptyLottie.json";
+import LottieIcons from "../LottieIcons/LottieIcons";
 
+const ExpenseList = () => {
   const dispatch = useDispatch();
 
   const [filteredList, setFilteredList] = useState([]);
@@ -81,6 +83,7 @@ const ExpenseList = () => {
   }, [categorySums]);
 
   const notifySuccess = () => toast.success("Expense deleted successfully");
+
   return (
     <div className="expense-list">
       {/* TOAST */}
@@ -102,7 +105,8 @@ const ExpenseList = () => {
         ))
       ) : (
         <div className="empty-state">
-          <img src={food} alt="empty-image" className="empty-image" />
+          {/* <img src={food} alt="empty-image" className="empty-image" /> */}
+          <LottieIcons animationData={EmptyLottie} width={400} />
           <h3 className="empty-text">No expenses added yet!</h3>
         </div>
       )}

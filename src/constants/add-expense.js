@@ -1,39 +1,38 @@
-import foodAndDrinksIcon from '../assets/icons/food.png';
-import educationIcon from '../assets/icons/education.png';
-import miscellaneousIcon from '../assets/icons/miscellaneous.png';
-import healthIcon from '../assets/icons/health.png';
-import entertainmentIcon from '../assets/icons/entertainment.png';
-
+import FoodIcon from "../assets/icons/Food2.png";
+import EducationIcon from "../assets/icons/Education2.png";
+import MiscellaneousIcon from "../assets/icons/Miscellaneous2.png";
+import HealthIcon from "../assets/icons/Health2.png";
+import EntertainmentIcon from "../assets/icons/Entertainment2.png";
 
 export const categories = [
   {
     id: 1,
     name: "Food",
-    icon: foodAndDrinksIcon,
+    icon: FoodIcon,
     color: "rgb(255, 99, 132)",
   },
   {
     id: 2,
     name: "Health",
-    icon: healthIcon,
+    icon: HealthIcon,
     color: "rgb(255, 99, 132)",
   },
   {
     id: 3,
     name: "Education",
-    icon: educationIcon,
+    icon: EducationIcon,
     color: "rgb(255, 99, 132)",
   },
   {
     id: 4,
     name: "Entertainment",
-    icon: entertainmentIcon,
+    icon: EntertainmentIcon,
     color: "rgb(255, 99, 132)",
   },
   {
     id: 5,
     name: "Miscellaneous",
-    icon: miscellaneousIcon,
+    icon: MiscellaneousIcon,
     color: "rgb(255, 99, 132)",
   },
 ];
