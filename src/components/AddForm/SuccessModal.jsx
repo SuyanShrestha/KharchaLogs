@@ -10,6 +10,8 @@ import "./SuccessModal.css";
 import MoneyRain from "../../assets/lottie/MoneyRainLottie.json";
 import LottieIcons from "../LottieIcons/LottieIcons";
 
+import { HiArrowLeftStartOnRectangle } from "react-icons/hi2";
+
 // to prevent that screen reader warning
 Modal.setAppElement("#root");
 
@@ -44,12 +46,12 @@ const SuccessModal = ({ modalOpen, setModalOpen }) => {
         <span>Added successfully!</span>
         {/* <img src={dummyImg} alt="" className="dummyImg"/> */}
         {/* LOTTIE */}
-        <LottieIcons animationData={MoneyRain} width={400}/>
+        <LottieIcons animationData={MoneyRain} width={400} />
 
-        <Link to="/"> 
+        <Link to="/" style={{ textDecoration: "none" }}>
           <div className="take-home-button">
-            <GrHomeRounded className="home-icon" />
-            <span>Home</span>
+            <HiArrowLeftStartOnRectangle />
+            <span>Back</span>
           </div>
         </Link>
       </div>
