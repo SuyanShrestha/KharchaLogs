@@ -1,33 +1,30 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import "./BarChart.css";
+import { useSelector } from "react-redux";
 
 import { BarController, BarElement, CategoryScale, Chart, LinearScale, Tooltip, Legend } from 'chart.js';
 
 Chart.register(BarController, BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const BarChart = () => {
+  const categorySums = useSelector((state) => state.expenses.categorySums);
+
   return (
     <div className="bar-chart">
       <Bar
-        data={{
-          labels: [
-            "Food",
-            "Health",
-            "Education",
-            "Entertainment",
-            "Miscellaneous",
-          ],
+         data={{
+          labels: Object.keys(categorySums),
           datasets: [
             {
               label: "Expenses",
-              data: [300, 50, 100, 150, 200],
+              data: Object.values(categorySums),
               backgroundColor: [
-                "rgba(255, 99, 132, 0.6)",
-                "rgba(54, 162, 235, 0.6)",
-                "rgba(255, 206, 86, 0.6)",
-                "rgba(75, 192, 192, 0.6)",
-                "rgba(153, 102, 255, 0.6)",
+                "rgba(66, 135, 245, 0.6)", 
+                "rgba(245, 159, 66, 0.6)", 
+                "rgba(245, 66, 209, 0.6)", 
+                "rgba(66, 245, 188, 0.6)",  
+                "rgba(245, 66, 66, 0.6)",   
               ],
             },
           ],

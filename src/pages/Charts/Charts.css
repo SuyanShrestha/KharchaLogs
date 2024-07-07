@@ -1,6 +1,11 @@
+.empty-chart h1 {
+    font-size: 2rem;
+    color: var(--primary-text-color);
+}
+
 .charts-div{
     color: black;
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +17,7 @@
     min-height: 38vh;
     width: 50%;
     margin: 2rem 0;
-    background-color: limegreen;
+    /* background-color: limegreen; */
 }
 
 .bottom-div{
@@ -27,7 +32,7 @@
 .bar-div{
     min-height: 40vh;
     width: 50%;
-    background-color: limegreen;
+    /* background-color: limegreen; */
     padding-bottom: 3rem;
     display: flex;
     justify-content: center;
