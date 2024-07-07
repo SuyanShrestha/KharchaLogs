@@ -1,0 +1,37 @@
+.modal-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dummyImg{
+    width: 20rem;
+}
+
+.take-home-button {
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    /* background: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.5rem;
+}
+
+.home-icon{
+    align-self: flex-start;
+}
+
+@media (max-width: 1024px) {
+    .dummyImg{
+        width: 16rem;
+    }
+}
+
+@media (max-width: 512px) {
+    .dummyImg{
+        width: 12rem;
+    }
+}

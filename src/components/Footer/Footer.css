@@ -1,0 +1,16 @@
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 512px){
+    footer{
+        padding-bottom: 0.5rem;
+        font-size: 14px;
+    }
+}

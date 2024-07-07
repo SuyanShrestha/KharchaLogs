@@ -1,14 +1,21 @@
 /* FONT */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 /* VARIABLES */
 :root {
-    --line-height-big: 1.5; 
+  --line-height-big: 1.5;
+  --background: #F4EEEE;
+  --primary-color: #001f3f;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Outfit", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--primary-color);
 }
