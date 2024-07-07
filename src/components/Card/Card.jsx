@@ -17,7 +17,7 @@ const Card = ({ item, notifySuccess }) => {
   }
 
   return (
-    <div className="card" style={{ borderRight: "6px solid black" }}>
+    <div className="card">
       <div className="card-image-container">
         <img
           src={item.category.icon}
@@ -35,7 +35,7 @@ const Card = ({ item, notifySuccess }) => {
           <p className="card-amount">Rs. {item.amount}</p>
         </div>
         <div className="delete-icon" onClick={handleDelete}>
-          <AiOutlineDelete />
+          <AiOutlineDelete className="delete-button"/>
         </div>
       </div>
     </div>

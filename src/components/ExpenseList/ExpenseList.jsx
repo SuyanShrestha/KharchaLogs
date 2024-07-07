@@ -59,7 +59,7 @@ const ExpenseList = () => {
       ) : (
         <div className="empty-state">
           <img src={food} alt="empty-image" className="empty-image" />
-          <p>No expenses added yet!</p>
+          <h3 className="empty-text">No expenses added yet!</h3>
         </div>
       )}
     </div>

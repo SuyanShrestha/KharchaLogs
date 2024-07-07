@@ -4,8 +4,13 @@
 /* VARIABLES */
 :root {
   --line-height-big: 1.5;
-  --background: #F4EEEE;
-  --primary-color: #001f3f;
+  --background: #E5E5E5;
+  --primary-color: #fff;
+  --secondary-color-30: #E8E8E8;
+  --secondary-color-10: #D36135;
+
+  --primary-text-color: #000;
+  --secondary-text-color: #E5E5E5;
 }
 
 * {
