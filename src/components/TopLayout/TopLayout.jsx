@@ -7,7 +7,7 @@ import { CiCirclePlus } from "react-icons/ci";
 import { ImCancelCircle } from "react-icons/im";
 import { MdOutlineSendTimeExtension } from "react-icons/md";
 
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import { searchExpense } from "../../redux/actions/expenses";

@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 
 import { FaChartPie } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -9,16 +10,20 @@ const Header = () => {
       {/* logo and searchbar */}
       <div className="header-top">
         {/* logo */}
-        <div className="header-logo">
-          <h1>खर्चLogs</h1>
-          <img src="/favicon.png" alt="" />
-        </div>
+        <Link to="/" style={{textDecoration: "none"}}>
+          <div className="header-logo">
+            <h1>खर्चLogs</h1>
+            <img src="/favicon.png" alt="" />
+          </div>
+        </Link>
 
         {/* charts */}
-        <div className="header-charts-button">
-          <FaChartPie />
-          <span>Charts</span>
-        </div>
+        <Link to="/charts" style={{textDecoration: 'none'}}>
+          <div className="header-charts-button">
+            <FaChartPie />
+            <span>Charts</span>
+          </div>
+        </Link>
       </div>
     </div>
   );

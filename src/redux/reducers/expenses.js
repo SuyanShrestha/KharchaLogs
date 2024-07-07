@@ -1,4 +1,9 @@
-import { ADD_EXPENSE, DELETE_EXPENSE, SEARCH_EXPENSE } from "../action-types/expenses";
+import {
+  ADD_EXPENSE,
+  DELETE_EXPENSE,
+  SEARCH_EXPENSE,
+  SET_CATEGORY_SUMS,
+} from "../action-types/expenses";
 
 // LOCAL STORAGE
 const handleInitialState = () => {
@@ -12,7 +17,7 @@ const handleInitialState = () => {
 
 const initialState = {
   expenseList: handleInitialState(),
-  searchQuery: ""  
+  searchQuery: "",
 };
 
 export const expenseReducer = (state = initialState, action) => {
@@ -22,6 +27,7 @@ export const expenseReducer = (state = initialState, action) => {
         "expense-list",
         JSON.stringify([...state.expenseList, action.data])
       );
+
       return {
         ...state,
         expenseList: [...state.expenseList, action.data],
@@ -32,10 +38,7 @@ export const expenseReducer = (state = initialState, action) => {
       const updatedList = state.expenseList.filter(
         (item) => item.createdAt !== data.createdAt
       );
-      localStorage.setItem(
-        "expense-list",
-        JSON.stringify([updatedList])
-      );
+      localStorage.setItem("expense-list", JSON.stringify([updatedList]));
       return {
         ...state,
         expenseList: updatedList,
@@ -46,9 +49,15 @@ export const expenseReducer = (state = initialState, action) => {
       const { searchQuery } = action;
       return {
         ...state,
-        searchQuery : action.searchQuery
-      }
+        searchQuery: action.searchQuery,
+      };
     }
+
+    case SET_CATEGORY_SUMS:
+      return {
+        ...state,
+        categorySums: action.data,
+      };
 
     default:
       return state;
