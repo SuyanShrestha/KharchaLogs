@@ -1,10 +1,14 @@
 .card {
-  background-color: white;
+  background-color: var(--primary-color);
+  box-shadow:  20px 20px 60px #bebebe,
+             -5px -5px 60px #ffffff;
   padding: 12px;
   margin: 0.5rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  border-right: var(--secondary-color-10) 5px solid;
 }
 
 .card-image {
@@ -23,6 +27,7 @@
   flex: 1;
   flex-direction: column;
   margin-left: 1rem;
+  color: var(--primary-text-color);
 }
 
 .card-title {
@@ -36,12 +41,17 @@
 
 .card-amount {
   font-size: 1.5rem;
-  color: #4caf50;
+  color: var(--secondary-color-10);
   font-weight: 500;
 }
 
 .delete-icon {
   font-size: 1.5rem;
+}
+
+.delete-button {
+  color: var(--secondary-color-10);
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {

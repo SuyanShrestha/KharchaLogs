@@ -14,7 +14,7 @@ import { searchExpense } from "../../redux/actions/expenses";
 
 const TopLayout = () => {
   const [searchQuery, setSearchQuery] = useState("");
-const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const handleQuery = (e) => {
     setSearchQuery(e.target.value);
@@ -25,7 +25,7 @@ const dispatch = useDispatch();
       {window.location.pathname === "/" ? (
         <div className="home-layout">
           <div className="searchbar">
-            <FaMagnifyingGlass />
+            <FaMagnifyingGlass className="glass-icon"/>
             <input
               type="text"
               placeholder="What are you looking for?"
@@ -33,7 +33,7 @@ const dispatch = useDispatch();
               onChange={handleQuery}
             />
           </div>
-          <Link to="/add">
+          <Link to="/add" style={{textDecoration: 'none'}}>
             <div className="add-button">
               <MdOutlineSendTimeExtension />
               <span> Add</span>
@@ -42,7 +42,7 @@ const dispatch = useDispatch();
         </div>
       ) : (
         <div className="add-layout">
-          <Link to="/">
+          <Link to="/" style={{textDecoration: 'none'}}>
             <div className="add-layout-button">
               <HiArrowLeftStartOnRectangle />
               <span>Back</span>

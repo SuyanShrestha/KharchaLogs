@@ -77,7 +77,7 @@ const AddForm = () => {
         <span>Title</span>
         <input
           type="text"
-          placeholder="Enter the name of the expenditure"
+          placeholder="Enter the name"
           value={title}
           onChange={handleTitle}
         />
@@ -112,7 +112,6 @@ const AddForm = () => {
                 <div
                   key={category.id}
                   className="category-item"
-                  style={{ borderRight: `5px solid ${category.color}` }}
                   onClick={() => handleCategory(category)}
                 >
                   <img src={category.icon} alt={category.name} />
