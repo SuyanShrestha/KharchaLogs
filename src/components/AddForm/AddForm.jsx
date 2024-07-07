@@ -13,6 +13,11 @@ import "react-toastify/dist/ReactToastify.css";
 
 import SuccessModal from "./SuccessModal";
 
+import Lottie from "react-lottie";
+import MoneyRain from "../../assets/lottie/MoneyRainLottie.json";
+
+import LottieIcons from "../LottieIcons/LottieIcons";
+
 const AddForm = () => {
   // from constants
   const categoryList = categories;
@@ -115,6 +120,11 @@ const AddForm = () => {
                   onClick={() => handleCategory(category)}
                 >
                   <img src={category.icon} alt={category.name} />
+                  {/* <LottieIcons
+                    animationData={category.animationData}
+                    width={45}
+                    className="category-icon"
+                  /> */}
                   <span>{category.name}</span>
                 </div>
               ))}
@@ -126,8 +136,8 @@ const AddForm = () => {
       {/* Add expense button */}
       <div className="form-add-button" onClick={handleSubmit}>
         <div>
-            <span>Add</span>
-            <MdOutlineSendTimeExtension className="add-icon"/>
+          <span>Add</span>
+          <MdOutlineSendTimeExtension className="add-icon" />
         </div>
       </div>
     </div>
