@@ -28,10 +28,9 @@ const LineChart = () => {
 
   // basic dsa sorting mechanism
   const latestExpenses = list
-    .sort((a, b) => b.createdAt - a.createdAt)
-    .reverse()
-    .slice(0, 7).reverse();
-
+  .sort((a, b) => b.createdAt - a.createdAt)
+  .slice(-7);
+  
   console.log(latestExpenses);
 
   // Get the dates and amounts of the latest expenses
