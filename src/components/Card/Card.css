@@ -8,7 +8,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   border-right: var(--secondary-color-10) 5px solid;
   border-radius: 1rem;
 }
@@ -47,11 +46,18 @@
   font-weight: 500;
 }
 
-.delete-icon {
+.side-buttons-div{
+  display: flex;
+  gap: 0.8rem;
+}
+
+.delete-icon,
+.edit-icon {
   font-size: 1.5rem;
 }
 
-.delete-button {
+.delete-button,
+.edit-button{
   color: var(--secondary-color-10);
   cursor: pointer;
 }
