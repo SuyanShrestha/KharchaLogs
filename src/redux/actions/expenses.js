@@ -3,6 +3,7 @@ import {
   DELETE_EXPENSE,
   SEARCH_EXPENSE,
   SET_CATEGORY_SUMS,
+  EDIT_EXPENSE
 } from "../action-types/expenses";
 
 export const addExpense = (data) => {
@@ -30,6 +31,13 @@ export const searchExpense = (searchQuery) => {
 export const handleCategorySums = (data) => {
   return {
     type: SET_CATEGORY_SUMS,
+    data: data,
+  };
+};
+
+export const handleEdit = (data) => {
+  return {
+    type: EDIT_EXPENSE,
     data: data,
   };
 };

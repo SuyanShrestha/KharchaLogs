@@ -10,7 +10,7 @@ import LogoLottie1 from "../../assets/lottie/LogoLottie2.json";
 const Header = () => {
   return (
     <div className="header-container">
-      {/* logo and searchbar */}
+      {/* logo */}
       <div className="header-top">
         {/* logo */}
         <Link to="/" style={{textDecoration: "none"}}>

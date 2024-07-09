@@ -2,19 +2,31 @@ import moment from "moment";
 import React from "react";
 
 import { AiOutlineDelete } from "react-icons/ai";
+import { CiEdit } from "react-icons/ci";
 
 import "./Card.css";
 import { useDispatch } from "react-redux";
-import { deleteExpense } from "../../redux/actions/expenses";
+import { deleteExpense, handleEdit } from "../../redux/actions/expenses";
+import { Link } from "react-router-dom";
 
 const Card = ({ item, notifySuccess }) => {
   const time = moment(item.createdAt).fromNow();
   const dispatch = useDispatch();
 
+  console.log(item);
+
   const handleDelete = () => {
     dispatch(deleteExpense(item));
     notifySuccess();
-  }
+  };
+
+  // const onEdit = (expense) => {
+  //   dispatch(handleEdit(expense));
+  // };
+
+  const storeEditLocal = (item) => {
+    localStorage.setItem("editExpense", JSON.stringify(item));
+  };
 
   return (
     <div className="card">
@@ -34,8 +46,14 @@ const Card = ({ item, notifySuccess }) => {
         <div>
           <p className="card-amount">Rs. {item.amount}</p>
         </div>
-        <div className="delete-icon" onClick={handleDelete}>
-          <AiOutlineDelete className="delete-button"/>
+        <div className="side-buttons-div">
+          <Link to="/edit" className="edit-icon" onClick={() => storeEditLocal(item)}>
+            <CiEdit className="edit-button"/>
+          </Link>
+
+          <div className="delete-icon" onClick={handleDelete}>
+            <AiOutlineDelete className="delete-button" />
+          </div>
         </div>
       </div>
     </div>

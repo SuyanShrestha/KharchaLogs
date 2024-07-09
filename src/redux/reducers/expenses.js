@@ -3,6 +3,7 @@ import {
   DELETE_EXPENSE,
   SEARCH_EXPENSE,
   SET_CATEGORY_SUMS,
+  EDIT_EXPENSE
 } from "../action-types/expenses";
 
 // LOCAL STORAGE
@@ -39,6 +40,18 @@ export const expenseReducer = (state = initialState, action) => {
         (item) => item.createdAt !== data.createdAt
       );
       localStorage.setItem("expense-list", JSON.stringify([updatedList]));
+      return {
+        ...state,
+        expenseList: updatedList,
+      };
+    }
+
+    case EDIT_EXPENSE: {
+      const { data } = action;
+      const updatedList = state.expenseList.map((item) =>
+        item.createdAt === data.createdAt ? data : item
+      );
+      localStorage.setItem("expense-list", JSON.stringify(updatedList));
       return {
         ...state,
         expenseList: updatedList,

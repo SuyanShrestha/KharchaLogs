@@ -16,15 +16,15 @@ const Charts = () => {
   if (!categorySums || Object.keys(categorySums).length === 0) {
     return (
       <div className="empty-chart">
-        <h1>No records found</h1>
-        <LottieIcons animationData={EmptyLottie2} width={400}/>
+        <h1>~ Whoa! So कन्जुस ~</h1>
+        <LottieIcons animationData={EmptyLottie2} width={600}/>
       </div>
     );
   }
 
   return (
     <div className="charts-div">
-      <h1>Charts</h1>
+      <h1>~ Charts ~</h1>
       <div className="top-div">
         <LineChart />
       </div>

@@ -1,10 +1,18 @@
+.empty-chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 80vh;
+}
+
 .empty-chart h1 {
     font-size: 2rem;
-    color: var(--primary-text-color);
+    color: var(--secondary-color-10);
 }
 
 .charts-div{
-    color: black;
+    color: var(--secondary-color-10);
     /* background-color: aqua; */
     display: flex;
     flex-direction: column;
