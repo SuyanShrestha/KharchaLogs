@@ -13,11 +13,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 import SuccessModal from "./SuccessModal";
 
-import Lottie from "react-lottie";
-import MoneyRain from "../../assets/lottie/MoneyRainLottie.json";
-
-import LottieIcons from "../LottieIcons/LottieIcons";
-
 const AddForm = () => {
   const categoryList = categories;
 
