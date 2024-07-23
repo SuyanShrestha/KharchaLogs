@@ -1,13 +1,22 @@
 import { combineReducers, legacy_createStore as createStore } from "redux";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage"; 
 import { expenseReducer } from "../reducers/expenses";
 
 // for multiple reducers
-const reducer = combineReducers({
+const rootReducer = combineReducers({
   expenses: expenseReducer,
 });
 
-const initialState = {};
+// configuration for redux-persist
+const persistConfig = {
+  key: "root",
+  storage,
+};
 
-const store = createStore(reducer, initialState);
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-export default store;
+const store = createStore(persistedReducer);
+const persistor = persistStore(store);
+
+export { store, persistor };
