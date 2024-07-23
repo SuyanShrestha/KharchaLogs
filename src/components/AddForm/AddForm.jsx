@@ -19,7 +19,6 @@ import MoneyRain from "../../assets/lottie/MoneyRainLottie.json";
 import LottieIcons from "../LottieIcons/LottieIcons";
 
 const AddForm = () => {
-  // from constants
   const categoryList = categories;
 
   const [categoryOpen, setCategoryOpen] = useState(false);
@@ -47,7 +46,6 @@ const AddForm = () => {
   const handleCategory = (category) => {
     setCategory(category);
     setCategoryOpen(false);
-    console.log(category);
   };
 
   const handleSubmit = () => {
@@ -56,16 +54,13 @@ const AddForm = () => {
       notify();
       return;
     }
-    console.log(title, amount, category);
     const data = { title, amount, category, createdAt: new Date() };
-    // dispatch({ type: "ADD_EXPENSE", data });
     dispatch(addExpense(data));
     setModalOpen(true);
   };
 
   return (
     <div className="add-form">
-      {/* TOAST */}
       <ToastContainer
         position="bottom-right"
         autoClose={1500}
@@ -74,10 +69,8 @@ const AddForm = () => {
         closeOnClick
       />
 
-      {/* Success Modal */}
       <SuccessModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
 
-      {/* title */}
       <div className="form-item">
         <span>Title</span>
         <input
@@ -88,7 +81,6 @@ const AddForm = () => {
         />
       </div>
 
-      {/* amount */}
       <div className="form-item">
         <span>Amount</span>
         <input
@@ -120,11 +112,6 @@ const AddForm = () => {
                   onClick={() => handleCategory(category)}
                 >
                   <img src={category.icon} alt={category.name} />
-                  {/* <LottieIcons
-                    animationData={category.animationData}
-                    width={45}
-                    className="category-icon"
-                  /> */}
                   <span>{category.name}</span>
                 </div>
               ))}

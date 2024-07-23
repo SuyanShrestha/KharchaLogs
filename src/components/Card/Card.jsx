@@ -13,16 +13,10 @@ const Card = ({ item, notifySuccess }) => {
   const time = moment(item.createdAt).fromNow();
   const dispatch = useDispatch();
 
-  console.log(item);
-
   const handleDelete = () => {
     dispatch(deleteExpense(item));
     notifySuccess();
   };
-
-  // const onEdit = (expense) => {
-  //   dispatch(handleEdit(expense));
-  // };
 
   const storeEditLocal = (item) => {
     localStorage.setItem("editExpense", JSON.stringify(item));
@@ -47,8 +41,12 @@ const Card = ({ item, notifySuccess }) => {
           <p className="card-amount">Rs. {item.amount}</p>
         </div>
         <div className="side-buttons-div">
-          <Link to="/edit" className="edit-icon" onClick={() => storeEditLocal(item)}>
-            <CiEdit className="edit-button"/>
+          <Link
+            to="/edit"
+            className="edit-icon"
+            onClick={() => storeEditLocal(item)}
+          >
+            <CiEdit className="edit-button" />
           </Link>
 
           <div className="delete-icon" onClick={handleDelete}>

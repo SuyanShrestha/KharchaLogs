@@ -158,7 +158,6 @@
     max-width: min-content;
   }
   .form-item input {
-    /* width: 100% !important; */
     background-color: blue;
   }
 }

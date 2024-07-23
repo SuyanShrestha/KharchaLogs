@@ -6,13 +6,16 @@ import { HiArrowLeftStartOnRectangle } from "react-icons/hi2";
 import { CiCirclePlus } from "react-icons/ci";
 import { ImCancelCircle } from "react-icons/im";
 import { MdOutlineSendTimeExtension } from "react-icons/md";
+import { LuFilter } from "react-icons/lu";
 
 import { Link, Outlet } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
+
+
 import { searchExpense } from "../../redux/actions/expenses";
 
-const TopLayout = () => {
+const TopLayout = ({ sortOpen, setSortOpen }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const dispatch = useDispatch();
 
@@ -25,7 +28,7 @@ const TopLayout = () => {
       {window.location.pathname === "/" ? (
         <div className="home-layout">
           <div className="searchbar">
-            <FaMagnifyingGlass className="glass-icon"/>
+            <FaMagnifyingGlass className="glass-icon" />
             <input
               type="text"
               placeholder="What are you looking for?"
@@ -33,16 +36,31 @@ const TopLayout = () => {
               onChange={handleQuery}
             />
           </div>
-          <Link to="/add" style={{textDecoration: 'none'}}>
-            <div className="add-button">
-              <MdOutlineSendTimeExtension />
-              <span> Add</span>
-            </div>
-          </Link>
+          <div className="buttons-div">
+            {!sortOpen && (
+              <div className="sort-button-container">
+                <button
+                  className="sort-button"
+                  onClick={() => setSortOpen(true)}
+                >
+                  <div className="sort-icon">
+                    <LuFilter />
+                  </div>
+                  <span>Sort</span>
+                </button>
+              </div>
+            )}
+            <Link to="/add" style={{ textDecoration: "none" }}>
+              <div className="add-button">
+                <MdOutlineSendTimeExtension />
+                <span> Add</span>
+              </div>
+            </Link>
+          </div>
         </div>
       ) : (
         <div className="add-layout">
-          <Link to="/" style={{textDecoration: 'none'}}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             <div className="add-layout-button">
               <HiArrowLeftStartOnRectangle />
               <span>Back</span>

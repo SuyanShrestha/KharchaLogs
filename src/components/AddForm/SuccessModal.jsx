@@ -16,7 +16,6 @@ import { HiArrowLeftStartOnRectangle } from "react-icons/hi2";
 Modal.setAppElement("#root");
 
 const SuccessModal = ({ modalOpen, setModalOpen }) => {
-  // styles from docs
   const customStyles = {
     content: {
       top: "50%",
@@ -25,29 +24,16 @@ const SuccessModal = ({ modalOpen, setModalOpen }) => {
       bottom: "auto",
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
-      //   backgroundColor: "skyblue",
       borderRadius: "1rem",
     },
   };
-
-  // options for lottie animations
-  // const defaultOptions = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: MoneyRain,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //   },
-  // };
 
   return (
     <Modal isOpen={modalOpen} style={customStyles}>
       <div className="modal-inner">
         <span>Added successfully!</span>
-        {/* <img src={dummyImg} alt="" className="dummyImg"/> */}
-        {/* LOTTIE */}
         <LottieIcons animationData={MoneyRain} width={400} />
-
+        
         <Link to="/" style={{ textDecoration: "none" }}>
           <div className="take-home-button">
             <HiArrowLeftStartOnRectangle />

@@ -15,16 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 import SuccessModal from "../AddForm/SuccessModal";
 import { HiArrowLeftStartOnRectangle } from "react-icons/hi2";
 
-import Lottie from "react-lottie";
-import MoneyRain from "../../assets/lottie/MoneyRainLottie.json";
-
-import LottieIcons from "../LottieIcons/LottieIcons";
-
 const EditForm = () => {
-  // from constants
-  //   const location = useLocation();
-  //   console.log(location);
-
   const dispatch = useDispatch();
   const expense = JSON.parse(localStorage.getItem("editExpense"));
 
@@ -84,7 +75,6 @@ const EditForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="edit-form">
-      {/* ToastContainer */}
       <ToastContainer
         position="bottom-right"
         autoClose={1500}
@@ -93,10 +83,8 @@ const EditForm = () => {
         closeOnClick
       />
 
-      {/* Success Modal */}
       <SuccessModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
 
-      {/* title */}
       <div className="form-item">
         <span>Title</span>
         <input
@@ -107,7 +95,6 @@ const EditForm = () => {
         />
       </div>
 
-      {/* amount */}
       <div className="form-item">
         <span>Amount</span>
         <input
@@ -149,7 +136,11 @@ const EditForm = () => {
 
       {/* Save button */}
       <div className="buttons-div">
-        <Link to="/" className="form-cancel-button" style={{textDecoration: "none"}}>
+        <Link
+          to="/"
+          className="form-cancel-button"
+          style={{ textDecoration: "none" }}
+        >
           <div>
             <HiArrowLeftStartOnRectangle className="cancel-icon" />
             <span>Cancel</span>
@@ -161,7 +152,6 @@ const EditForm = () => {
             <MdOutlineSendTimeExtension className="save-icon" />
           </div>
         </button>
-        {/* Cancel button */}
       </div>
     </form>
   );

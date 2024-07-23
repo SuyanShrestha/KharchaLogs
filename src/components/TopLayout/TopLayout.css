@@ -40,6 +40,46 @@
   color: gray;
 }
 
+.buttons-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.sort-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sort-button {
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid grey;
+  border-radius: 6px;
+  cursor: pointer;
+  gap: 0.5rem;
+  background-color: var(--secondary-color-10);
+  color: var(--secondary-text-color);
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+}
+
+.sort-button span {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.sort-button .sort-icon {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
 .add-button {
   display: flex;
   align-items: center;
