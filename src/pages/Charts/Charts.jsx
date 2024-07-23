@@ -17,7 +17,7 @@ const Charts = () => {
     return (
       <div className="empty-chart">
         <h1>~ Whoa! So कन्जुस ~</h1>
-        <LottieIcons animationData={EmptyLottie2} width={600}/>
+        <LottieIcons animationData={EmptyLottie2} width={600} />
       </div>
     );
   }

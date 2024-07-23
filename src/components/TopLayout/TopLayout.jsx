@@ -11,8 +11,6 @@ import { LuFilter } from "react-icons/lu";
 import { Link, Outlet } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-
-
 import { searchExpense } from "../../redux/actions/expenses";
 
 const TopLayout = ({ sortOpen, setSortOpen }) => {

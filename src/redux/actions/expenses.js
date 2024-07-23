@@ -3,7 +3,7 @@ import {
   DELETE_EXPENSE,
   SEARCH_EXPENSE,
   SET_CATEGORY_SUMS,
-  EDIT_EXPENSE
+  EDIT_EXPENSE,
 } from "../action-types/expenses";
 
 export const addExpense = (data) => {

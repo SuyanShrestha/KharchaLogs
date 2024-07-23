@@ -1,13 +1,12 @@
-import React from 'react'
-import EditForm from '../../components/EditForm/EditForm'
+import React from "react";
+import EditForm from "../../components/EditForm/EditForm";
 
 const Edit = () => {
   return (
     <div>
-        <EditForm />
-        
+      <EditForm />
     </div>
-  )
-}
+  );
+};
 
-export default Edit
+export default Edit;

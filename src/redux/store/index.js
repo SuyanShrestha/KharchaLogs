@@ -1,9 +1,9 @@
-import {combineReducers, legacy_createStore as createStore} from 'redux';
-import { expenseReducer } from '../reducers/expenses';
+import { combineReducers, legacy_createStore as createStore } from "redux";
+import { expenseReducer } from "../reducers/expenses";
 
 // for multiple reducers
 const reducer = combineReducers({
-    expenses: expenseReducer,
+  expenses: expenseReducer,
 });
 
 const initialState = {};

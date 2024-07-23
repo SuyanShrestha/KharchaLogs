@@ -30,7 +30,6 @@ const ExpenseList = ({ sortOpen, setSortOpen }) => {
     (state) => state.expenses
   );
 
-  // filtering the list based on the query
   const debounceTimeoutRef = useRef(null);
 
   // for searching with search query
@@ -50,7 +49,6 @@ const ExpenseList = ({ sortOpen, setSortOpen }) => {
     setFilteredList(sortList(filteredList));
   };
 
-  // for sorting according to filter
   const sortList = (list) => {
     switch (sortType) {
       case "amountHigh":
@@ -124,7 +122,6 @@ const ExpenseList = ({ sortOpen, setSortOpen }) => {
 
   return (
     <div className="expense-list">
-      {/* TOAST */}
       <ToastContainer
         position="bottom-right"
         autoClose={1500}

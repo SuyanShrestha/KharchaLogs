@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import {
   LineController,
   LineElement,
-  PointElement, // import PointElement
+  PointElement,
   CategoryScale,
   Chart,
   LinearScale,
@@ -12,7 +12,7 @@ import {
   Legend,
 } from "chart.js";
 
-// Register PointElement along with other elements
+// For error due to unregistered PointElement
 Chart.register(
   LineController,
   LineElement,
@@ -26,14 +26,12 @@ Chart.register(
 const LineChart = () => {
   const { expenseList: list } = useSelector((state) => state.expenses);
 
-  // basic dsa sorting mechanism
   const latestExpenses = list
-  .sort((a, b) => b.createdAt - a.createdAt)
-  .slice(-7);
-  
+    .sort((a, b) => b.createdAt - a.createdAt)
+    .slice(-7);
+
   console.log(latestExpenses);
 
-  // Get the dates and amounts of the latest expenses
   const dates = latestExpenses.map((expense) =>
     new Date(expense.createdAt).toLocaleDateString()
   );

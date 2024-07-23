@@ -18,10 +18,6 @@ Chart.register(DoughnutController, ArcElement, CategoryScale, Tooltip, Legend);
 const PieChart = () => {
   const categorySums = useSelector((state) => state.expenses.categorySums);
 
-  // if (!categorySums) {
-  //   return null;
-  // }
-
   return (
     <div className="pie-chart">
       <Doughnut
@@ -32,11 +28,11 @@ const PieChart = () => {
               label: "Expenses",
               data: Object.values(categorySums),
               backgroundColor: [
-                "rgba(66, 135, 245, 0.6)", 
-                "rgba(245, 159, 66, 0.6)", 
-                "rgba(245, 66, 209, 0.6)", 
-                "rgba(66, 245, 188, 0.6)",  
-                "rgba(245, 66, 66, 0.6)",   
+                "rgba(66, 135, 245, 0.6)",
+                "rgba(245, 159, 66, 0.6)",
+                "rgba(245, 66, 209, 0.6)",
+                "rgba(66, 245, 188, 0.6)",
+                "rgba(245, 66, 66, 0.6)",
               ],
             },
           ],

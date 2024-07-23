@@ -10,20 +10,16 @@ import LogoLottie1 from "../../assets/lottie/LogoLottie2.json";
 const Header = () => {
   return (
     <div className="header-container">
-      {/* logo */}
       <div className="header-top">
-        {/* logo */}
-        <Link to="/" style={{textDecoration: "none"}}>
+        <Link to="/" style={{ textDecoration: "none" }}>
           <div className="header-logo">
             <h1>खर्चLogs</h1>
-            {/* <img src="/favicon.png" alt="" /> */}
-            <LottieIcons animationData={LogoLottie1} width={70}/>
-
+            <LottieIcons animationData={LogoLottie1} width={70} />
           </div>
         </Link>
 
         {/* charts */}
-        <Link to="/charts" style={{textDecoration: 'none'}}>
+        <Link to="/charts" style={{ textDecoration: "none" }}>
           <div className="header-charts-button">
             <FaChartPie />
             <span>Charts</span>

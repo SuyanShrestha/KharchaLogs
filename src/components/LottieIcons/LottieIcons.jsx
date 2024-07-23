@@ -1,13 +1,13 @@
-import Lottie from 'react-lottie';
+import Lottie from "react-lottie";
 
 const LottieIcons = ({ animationData, width, height }) => {
   const defaultOptions = {
     loop: true,
-    autoplay: true, 
+    autoplay: true,
     animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
 
   return <Lottie options={defaultOptions} width={width} height={height} />;
