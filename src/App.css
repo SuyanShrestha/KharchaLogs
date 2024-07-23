@@ -25,7 +25,7 @@ body {
   color: var(--primary-color);
 }
 
-.main-div{
+.main-div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
