@@ -21,9 +21,12 @@ const TopLayout = ({ sortOpen, setSortOpen }) => {
     setSearchQuery(e.target.value);
     dispatch(searchExpense(e.target.value));
   };
+
+  const isHomePage = window.location.pathname === "/";
+
   return (
     <div className="top-layout">
-      {window.location.pathname === "/" ? (
+      {isHomePage ? (
         <div className="home-layout">
           <div className="searchbar">
             <FaMagnifyingGlass className="glass-icon" />

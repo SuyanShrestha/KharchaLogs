@@ -1,9 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
 
-import dummyImg from "/favicon.png";
-import { GrHomeRounded } from "react-icons/gr";
-
 import { Link } from "react-router-dom";
 import "./SuccessModal.css";
 
@@ -33,7 +30,7 @@ const SuccessModal = ({ modalOpen, setModalOpen }) => {
       <div className="modal-inner">
         <span>Added successfully!</span>
         <LottieIcons animationData={MoneyRain} width={400} />
-        
+
         <Link to="/" style={{ textDecoration: "none" }}>
           <div className="take-home-button">
             <HiArrowLeftStartOnRectangle />
