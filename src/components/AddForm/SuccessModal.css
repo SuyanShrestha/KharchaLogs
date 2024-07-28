@@ -1,0 +1,41 @@
+.modal-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1.5rem;
+}
+
+.dummy-img {
+  width: 20rem;
+}
+
+.take-home-button {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+}
+
+.home-icon {
+  align-self: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .dummyImg {
+    width: 16rem;
+  }
+}
+
+@media (max-width: 512px) {
+  .dummyImg {
+    width: 12rem;
+  }
+}

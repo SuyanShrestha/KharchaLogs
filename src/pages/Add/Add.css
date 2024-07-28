@@ -1,0 +1,16 @@
+.add {
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .add {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .add {
+    width: 100%;
+  }
+}

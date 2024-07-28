@@ -1,0 +1,107 @@
+.top-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.home-layout {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  padding-left: 1rem;
+  box-shadow: rgba(85, 60, 154, 0.25) 0px 0px 10px;
+}
+
+.searchbar input {
+  border: none;
+  outline: none;
+  padding: 0 0.5rem;
+  width: 80%;
+  margin-left: 0.5rem;
+
+  color: var(--primary-text-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.searchbar input::placeholder,
+.glass-icon {
+  color: #808080;
+}
+
+.buttons-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sort-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sort-button {
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid grey;
+  border-radius: 6px;
+  cursor: pointer;
+  gap: 0.5rem;
+  background-color: var(--secondary-color-10);
+  color: var(--secondary-text-color);
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+}
+
+.sort-button span {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.sort-button .sort-icon {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+
+  background-color: var(--secondary-color-10);
+  color: var(--secondary-text-color);
+}
+
+.add-layout {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.add-layout-button {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+}

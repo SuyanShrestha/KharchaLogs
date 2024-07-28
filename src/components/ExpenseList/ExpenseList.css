@@ -1,0 +1,134 @@
+.expense-list {
+  margin: 6px 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.empty-image {
+  height: 360px;
+}
+
+.empty-state .empty-text {
+  font-size: 1.5rem;
+  color: var(--primary-text-color);
+}
+
+/* sort area */
+.sort-container {
+  border-radius: 2rem;
+  background: #fff;
+  box-shadow: rgba(85, 60, 154, 0.25) 0px 0px 10px;
+  margin: 1rem 0.5rem;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sort-container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort-header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sort-container-header h1 {
+  font-size: 1.75rem;
+  color: var(--secondary-color-10);
+}
+
+.sort-container-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort-container-child h2 {
+  font-size: 1.25rem;
+  color: var(--primary-text-color);
+}
+
+.sort-container-child .buttons-div button {
+  background-color: var(--background);
+  color: var(--primary-text-color);
+  margin-right: 0.6rem;
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  
+  box-shadow: rgba(85, 60, 154, 0.25) 0px 0px 6px;
+}
+
+.sort-header-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.remove-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+
+  background-color: var(--secondary-color-10);
+  color: var(--secondary-text-color);
+}
+
+.remove-button .remove-icon {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.remove-button span {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.back-layout {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.back-layout-button {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .empty-image {
+    height: 320px;
+  }
+}
+
+@media (max-width: 512px) {
+  .empty-image {
+    height: 240px;
+  }
+}
